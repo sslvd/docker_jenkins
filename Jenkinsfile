@@ -22,7 +22,7 @@ pipeline {
      stage('Ansible')
     {
       steps{
-          ansiblePlaybook credentialsId: 'webservers', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'ansible.yml'
+          ansiblePlaybook credentialsId: 'private_key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'ansible.yml'
          
       }
     }
